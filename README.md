@@ -22,7 +22,7 @@ Then go to attrbute inspector and set the ```loveImage```,```unLoveImage```,```l
 
 
 
--In the class, just change the ```isLoved``` to true to show the animation
+-In the class, just change the ```isLoved``` to true to show the animation, (remember to add default value for the isLoved)
 ```swift
     
     // love button IBOutlet
