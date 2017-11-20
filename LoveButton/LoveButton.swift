@@ -3,7 +3,7 @@
 //  EMS
 //
 //  Created by abedalkareem omreyh on 11/18/17.
-//  Copyright © 2017 sdvision. All rights reserved.
+//  Copyright © 2017 Abedalkareem omreyh. All rights reserved.
 //
 
 import UIKit
@@ -77,6 +77,7 @@ class LoveButton: UIButton {
             let addedY = -CGFloat(arc4random_uniform(UInt32(viewFrame.height*1.5)))
             
             heart.moveTo(addToX: addedX, andToY: addedY, withDuration: Double(drand48()*2), completion: {
+                // remove the image when finish animating
                 heart.removeFromSuperview()
             })
         }
