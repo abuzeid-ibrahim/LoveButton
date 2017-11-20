@@ -25,6 +25,7 @@ class LoveButton: UIButton {
             guard let isLoved = isLoved,let oldValue = oldValue else{
                 return
             }
+            // check that the isLoved is equal to true and the old value for the isLoved was false
             if isLoved && !oldValue { addHearts() }
         }
     }
@@ -59,16 +60,22 @@ class LoveButton: UIButton {
         let window = UIApplication.shared.keyWindow!
         let viewFrame = window.convert(self.frame, from: self.superview)
         for _ in 0...numberOfHearts {
-            let size = viewFrame.width*0.2
-            let frame = CGRect(x: viewFrame.origin.x+(viewFrame.size.width/2), y: viewFrame.origin.y+(viewFrame.size.height/2), width: size, height: size)
+            let size = viewFrame.width*0.2 // size of the small images
+            // the y and the x is on the mid of the button
+            let x = viewFrame.origin.x+(viewFrame.size.width/2)
+            let y = viewFrame.origin.y+(viewFrame.size.height/2)
+            let frame = CGRect(x: x, y: y, width: size, height: size)
             
             let heart = UIImageView(frame: frame)
             heart.image = loveImage
             heart.tintColor = loveColor
             window.addSubview(heart)
             
+            // a random number between half button width before the button, and half button width after the button
             let addedX = CGFloat(arc4random_uniform(UInt32(viewFrame.size.width*2)))-(viewFrame.size.width)
+            // a random number between the mid of the button and the half of button height above the button
             let addedY = -CGFloat(arc4random_uniform(UInt32(viewFrame.height*1.5)))
+            
             heart.moveTo(addToX: addedX, andToY: addedY, withDuration: Double(drand48()*2), completion: {
                 heart.removeFromSuperview()
             })
@@ -78,6 +85,7 @@ class LoveButton: UIButton {
 }
 
 
+// MARK: Animation
 extension UIView{
     fileprivate func moveTo(addToX x:CGFloat,andToY y:CGFloat,withDuration duration: TimeInterval,completion: @escaping () -> Void){
         UIView.animate(withDuration: duration, animations: {
