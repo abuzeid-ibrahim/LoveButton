@@ -10,16 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var btnLove: LoveButton!
+    @IBOutlet weak var btnStar: LoveButton!
+    @IBOutlet weak var btnLike: LoveButton!
+    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+     
+        btnLove.isLoved = true
+        btnStar.isLoved = false
+        btnLike.isLoved = false
+        
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
+    @IBAction func love(_ sender: LoveButton) {
+        sender.isLoved = !sender.isLoved!
+    }
+    
+    
+    
 
 }
 

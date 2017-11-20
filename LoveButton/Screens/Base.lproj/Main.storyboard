@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Ti-74-4QM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoveButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WC8-2H-EsM" customClass="LoveButton" customModule="LoveButton" customModuleProvider="target">
+                                <rect key="frame" x="152.5" y="266.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="WkT-Pd-qD6"/>
+                                    <constraint firstAttribute="height" constant="70" id="epe-J1-MO4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="loveImage" value="heart_icon"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="unLoveImage" value="heart_icon"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="loveColor">
+                                        <color key="value" red="1" green="0.45490196078431372" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unLoveColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfHearts">
+                                        <integer key="value" value="200"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="love:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idY-pB-ps4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX3-2v-vF5" customClass="LoveButton" customModule="LoveButton" customModuleProvider="target">
+                                <rect key="frame" x="252.5" y="216.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="7gN-ZK-jCK"/>
+                                    <constraint firstAttribute="height" constant="70" id="9Q2-Et-VpU"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="loveImage" value="star_icon"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="unLoveImage" value="star_icon"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="loveColor">
+                                        <color key="value" red="1" green="0.6767812096412299" blue="0.7513029320501019" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unLoveColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfHearts">
+                                        <integer key="value" value="200"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="love:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLo-zy-7w2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6m-BR-ygg" customClass="LoveButton" customModule="LoveButton" customModuleProvider="target">
+                                <rect key="frame" x="52.5" y="216.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="6hX-3Z-NmT"/>
+                                    <constraint firstAttribute="height" constant="70" id="Nhp-Dr-Vzf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="loveImage" value="thumb_icon"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="unLoveImage" value="thumb_icon"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="loveColor">
+                                        <color key="value" red="1" green="0.71829072168187613" blue="0.880859375" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unLoveColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfHearts">
+                                        <integer key="value" value="200"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="love:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yjt-VP-XQj"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="3V9-JD-eOm">
+                                <rect key="frame" x="62" y="96.5" width="250" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="KgH-4Z-dup"/>
+                                    <constraint firstAttribute="height" constant="80" id="z9c-8f-BGY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Vjl-t0-Ah8">
+                                <rect key="frame" x="0.0" y="563" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5Iw-b8-T55"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with love" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVL-vC-l8V">
+                                <rect key="frame" x="126.5" y="572.5" width="122.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.4549019608" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vjl-t0-Ah8" secondAttribute="trailing" id="0NQ-jl-iw9"/>
+                            <constraint firstItem="WC8-2H-EsM" firstAttribute="leading" secondItem="a6m-BR-ygg" secondAttribute="trailing" constant="30" id="8rp-sX-JQT"/>
+                            <constraint firstItem="ZVL-vC-l8V" firstAttribute="centerY" secondItem="Vjl-t0-Ah8" secondAttribute="centerY" id="Ger-CZ-5zT"/>
+                            <constraint firstItem="eX3-2v-vF5" firstAttribute="leading" secondItem="WC8-2H-EsM" secondAttribute="trailing" constant="30" id="J3Y-Hk-FfE"/>
+                            <constraint firstItem="eX3-2v-vF5" firstAttribute="top" secondItem="WC8-2H-EsM" secondAttribute="top" constant="-50" id="Oys-dm-QZQ"/>
+                            <constraint firstItem="WC8-2H-EsM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Rye-KL-4ek"/>
+                            <constraint firstItem="3V9-JD-eOm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UO4-Xo-xlI"/>
+                            <constraint firstItem="ZVL-vC-l8V" firstAttribute="centerX" secondItem="Vjl-t0-Ah8" secondAttribute="centerX" id="Vyx-Bv-3tB"/>
+                            <constraint firstAttribute="bottom" secondItem="Vjl-t0-Ah8" secondAttribute="bottom" id="WqM-Zf-edm"/>
+                            <constraint firstItem="a6m-BR-ygg" firstAttribute="top" secondItem="WC8-2H-EsM" secondAttribute="top" constant="-50" id="WwA-PZ-9LY"/>
+                            <constraint firstItem="Vjl-t0-Ah8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="enx-ba-7Tn"/>
+                            <constraint firstItem="WC8-2H-EsM" firstAttribute="top" secondItem="3V9-JD-eOm" secondAttribute="bottom" constant="90" id="fDD-hl-oIE"/>
+                            <constraint firstItem="WC8-2H-EsM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ocQ-YI-8rQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vob-0H-esG"/>
+                    <connections>
+                        <outlet property="btnLike" destination="a6m-BR-ygg" id="dSP-eO-OYL"/>
+                        <outlet property="btnLove" destination="WC8-2H-EsM" id="jE2-hD-iy0"/>
+                        <outlet property="btnStar" destination="eX3-2v-vF5" id="gKD-NS-43o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400.80000000000001" y="160.56971514242881"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="szD-pE-8Lb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ti-74-4QM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="e0m-mM-q82">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.27381131949999998" blue="0.4965951462" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KSN-sm-406"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vb4-gw-L8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407" y="161"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="720" height="1280"/>
+        <image name="heart_icon" width="128" height="128"/>
+        <image name="logo" width="509" height="103"/>
+        <image name="star_icon" width="128" height="128"/>
+        <image name="thumb_icon" width="128" height="128"/>
+    </resources>
+</document>
