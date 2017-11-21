@@ -4,6 +4,7 @@
 //
 //  Created by abedalkareem omreyh on 11/18/17.
 //  Copyright © 2017 Abedalkareem omreyh. All rights reserved.
+//  github: https://github.com/Abedalkareem/LoveButton
 //
 
 import UIKit
@@ -11,13 +12,13 @@ import UIKit
 @IBDesignable
 class LoveButton: UIButton {
     
-    @IBInspectable var loveColor:UIColor!
-    @IBInspectable var unLoveColor:UIColor!
+    @IBInspectable var loveColor:UIColor! = UIColor.red
+    @IBInspectable var unLoveColor:UIColor! = UIColor.gray
     @IBInspectable var loveImage:UIImage!
     @IBInspectable var unLoveImage:UIImage!
     @IBInspectable var numberOfHearts:Int = 100
     
-
+    
     
     var isLoved:Bool? = nil {
         didSet{
@@ -33,6 +34,11 @@ class LoveButton: UIButton {
     
     override func draw(_ rect: CGRect) {
         
+        guard loveImage != nil && unLoveImage != nil else{
+            fatalError("Please add loveImage and unLoveImage from the interface builder")
+        }
+        
+        
         loveImage = loveImage.withRenderingMode(.alwaysTemplate)
         unLoveImage = unLoveImage.withRenderingMode(.alwaysTemplate)
         
@@ -42,7 +48,7 @@ class LoveButton: UIButton {
         
         self.changeStatus()
     }
-
+    
     
     private func animateLove(){
         UIView.animate(withDuration: 0.5) {
@@ -82,7 +88,7 @@ class LoveButton: UIButton {
             })
         }
     }
-
+    
 }
 
 
@@ -101,3 +107,5 @@ extension UIView{
         }
     }
 }
+
+
