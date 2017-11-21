@@ -14,7 +14,15 @@ Love button is a custom phone button with an animated effect that showing hearts
 <b>Usage</b>
 
 
+In the interface builder go to identity inspector and set the custom class to ```LoveButton```
+<img src="https://github.com/Abedalkareem/LoveButton/blob/master/customclass.png?raw=true"  width="250">
 
+Then go to attrbute inspector and set the ```loveImage```,```unLoveImage```,```loveColor```,```unLoveColor```
+<img src="https://github.com/Abedalkareem/LoveButton/blob/master/inspector.png?raw=true"  width="250">
+
+
+
+-In the class, just change the ```isLoved``` to true to show the animation, (remember to add default value for the isLoved)
 ```swift
     
     // love button IBOutlet
@@ -33,7 +41,6 @@ Love button is a custom phone button with an animated effect that showing hearts
         sender.isLoved = true
     }
 ```
-
 <b>Installation</b>
 
 Just add ```LoveButton.swift``` in your project
