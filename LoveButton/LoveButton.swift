@@ -1,9 +1,9 @@
 //
 //  LoveButton.swift
-//  EMS
+//  LoveButton
 //
 //  Created by abedalkareem omreyh on 11/18/17.
-//  Copyright © 2017 Abedalkareem omreyh. All rights reserved.
+//  Copyright © 2017 abedalkareem omreyh. All rights reserved.
 //  github: https://github.com/Abedalkareem/LoveButton
 //
 
@@ -12,18 +12,22 @@ import UIKit
 @IBDesignable
 class LoveButton: UIButton {
     
-    @IBInspectable var loveColor:UIColor! = UIColor.red
-    @IBInspectable var unLoveColor:UIColor! = UIColor.gray
-    @IBInspectable var loveImage:UIImage!
-    @IBInspectable var unLoveImage:UIImage!
-    @IBInspectable var numberOfHearts:Int = 100
+    /// Selected love button color.
+    @IBInspectable var loveColor: UIColor! = UIColor.red
+    /// unSelected love button color.
+    @IBInspectable var unLoveColor: UIColor! = UIColor.gray
+    /// The image that will show when the status of the button selected.
+    @IBInspectable var loveImage: UIImage!
+    /// The image that will show when the status of the button unselected.
+    @IBInspectable var unLoveImage: UIImage!
+    /// The number of views will show when the button pressed.
+    @IBInspectable var numberOfHearts: Int = 100
     
-    
-    
-    var isLoved:Bool? = nil {
-        didSet{
+    /// When the value is true the color will be `loveColor` and the animation will start.
+    var isLoved: Bool? = nil {
+        didSet {
             changeStatus()
-            guard let isLoved = isLoved,let oldValue = oldValue else{
+            guard let isLoved = isLoved,let oldValue = oldValue else {
                 return
             }
             // check that the isLoved is equal to true and the old value for the isLoved was false
@@ -50,13 +54,13 @@ class LoveButton: UIButton {
     }
     
     
-    private func animateLove(){
+    private func animateLove() {
         UIView.animate(withDuration: 0.5) {
             self.changeStatus()
         }
     }
     
-    private func changeStatus(){
+    private func changeStatus() {
         let isLoved = self.isLoved ?? false
         self.setImage(isLoved ? self.loveImage : self.unLoveImage, for: .normal)
         self.tintColor = isLoved ? self.loveColor : self.unLoveColor
